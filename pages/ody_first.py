@@ -8,6 +8,13 @@ st.set_page_config(layout='wide', initial_sidebar_state='collapsed')
 st.markdown(
     """
     <style>
+
+    ._container_51w34_1,
+    ._profileContainer_51w34_53 {
+        display: none;
+        visibility: hidden;
+    }
+  
    
    header {visibility: hidden;}       
    footer {visibility: hidden;}         
