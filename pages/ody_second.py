@@ -11,18 +11,25 @@ st.markdown(
     <style>
 
     ._container_51w34_1 {
-        z-index: 50;
-        font-size: .875rem;
-        line-height: 1.25rem;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        display: none !important;
-    }
+    z-index: 50;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: none;
+}
 
-    ._profileContainer_51w34_53 {
-        display: none !important;
-    }
+._profileContainer_51w34_53 {
+    z-index: 40;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    position: fixed;
+    bottom: 0;
+    right: 57px;
+    display: none;
+    align-items: center;
+}
    
    header {visibility: hidden;}       
    footer {visibility: hidden;}         
