@@ -13,6 +13,10 @@ hideTopBar = True
 st.markdown(
     """
     <style>
+
+    _profileContainer_51w34_53 {
+        display: none !important;
+    }
    
    header {visibility: hidden;}       
    footer {visibility: hidden;}         
