@@ -24,8 +24,15 @@ st.markdown(
     }
 
     ._profileContainer_51w34_53 {
-        display: none !important;
-    }
+    z-index: 40;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    position: fixed;
+    bottom: 0;
+    right: 57px;
+    display: none;
+    align-items: center;
+}
    
    header {visibility: hidden;}       
    footer {visibility: hidden;}         
