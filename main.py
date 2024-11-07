@@ -280,7 +280,8 @@ margin-bottom: 22px;
     border-radius: 5px;
     animation: grow 60s linear forwards; /* Animation: grow over 10 seconds */
 }}
- 
+ git remote add origin <new-repo-url>
+
 @keyframes grow {{
     from {{
         width: 0;
@@ -290,6 +291,10 @@ margin-bottom: 22px;
     }}
 }}
     </style>
+    
+    
+    git checkout -b Dashboard-deployed-Localhost
+
  
         <head>
             <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
