@@ -16,7 +16,8 @@ st.markdown(
         visibility: hidden;
     }
   
-   
+
+
    header {visibility: hidden;}       
    footer {visibility: hidden;}         
    .stApp > header {display: none;}
