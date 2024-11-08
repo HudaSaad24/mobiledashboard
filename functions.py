@@ -151,10 +151,10 @@ def plot_histograms(product_name, platform_name):
     # Label mapping for metrics
     label_map = {
         'clicks': 'Clicks',
-        'views': 'Views (k)',
-        'daily_spend': 'Daily Spend (k)',
-        'reach': 'Reach (k)',
-        'impressions': 'Impressions (k)'
+        'views': 'Views',
+        'daily_spend': 'Daily Spend',
+        'reach': 'Reach',
+        'impressions': 'Impressions'
     }
 
     # Reshape for plotting
