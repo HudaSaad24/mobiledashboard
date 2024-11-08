@@ -191,11 +191,22 @@ def plot_histograms(product_name, platform_name):
     )
     
 
-    # Set bar labels and positions
+    # # Set bar labels and positions
+    # for trace in fig.data:
+    #     trace.text = trace.y  
+    #     trace.textposition = 'outside'  # Set text position for all traces
+    #     trace.textfont.size = 14  # Set font size for all traces
     for trace in fig.data:
-        trace.text = trace.y  
+        # Match each trace by the metric name and set text from summary_df
+        metric = trace.name
+        text_values = summary_df[summary_df['Matrix'] == metric]['Values'].astype(str)
+        # Make sure to align the lengths
+        if len(trace.y) == len(text_values):
+            trace.text = text_values  # Set text as values from summary_df
+            print(type(text_values))
+        
         trace.textposition = 'outside'  # Set text position for all traces
-        trace.textfont.size = 14  # Set font size for all traces        
+        trace.textfont.size = 20  # Set font size for all traces        
 
 
     # Set y-axis range
@@ -226,14 +237,16 @@ def plot_histograms(product_name, platform_name):
         font_color='white',
         bargap=0.4,
         bargroupgap=0.3,
-        yaxis=dict(
-            showgrid=True,
-            gridcolor='rgba(255,255,255,0.1)',
-            gridwidth=1,
-        ),
-        xaxis_title=None,
-        yaxis_title=None,
-    )
+   yaxis=dict(
+        showgrid=False,  # Enable horizontal grid lines
+        zeroline=False,
+        showticklabels=False,
+        gridcolor='rgba(255,255,255,0.1)',  # Set grid line color to a very translucent white
+        gridwidth=1,  # Set the width of grid lines
+    ),
+    xaxis_title=None,
+    yaxis_title=None,
+)
 
     # Border and opacity settings
     fig.update_traces(marker=dict(
