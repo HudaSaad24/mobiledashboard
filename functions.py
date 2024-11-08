@@ -199,7 +199,7 @@ def plot_histograms(product_name, platform_name):
     for trace in fig.data:
         # Match each trace by the metric name and set text from summary_df
         metric = trace.name
-        text_values = summary_df[summary_df['Matrix'] == metric]['Values'].astype(str)
+        text_values = summary_df[summary_df['Matrix'] == metric]['Values'].astype(int).astype(str)
         # Make sure to align the lengths
         if len(trace.y) == len(text_values):
             trace.text = text_values  # Set text as values from summary_df
