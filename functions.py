@@ -190,12 +190,6 @@ def plot_histograms(product_name, platform_name):
         color_discrete_map=color_discrete_map,
     )
     
-
-    # # Set bar labels and positions
-    # for trace in fig.data:
-    #     trace.text = trace.y  
-    #     trace.textposition = 'outside'  # Set text position for all traces
-    #     trace.textfont.size = 14  # Set font size for all traces
     for trace in fig.data:
         # Match each trace by the metric name and set text from summary_df
         metric = trace.name
