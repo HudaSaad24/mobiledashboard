@@ -186,7 +186,7 @@ def plot_histograms(product_name, platform_name):
         color='Metric', 
         barmode='group', 
         height=300,
-        width=800,
+        width=400,
         color_discrete_map=color_discrete_map,
     )
     
@@ -200,7 +200,7 @@ def plot_histograms(product_name, platform_name):
             print(type(text_values))
         
         trace.textposition = 'outside'  # Set text position for all traces
-        trace.textfont.size = 20  # Set font size for all traces        
+        trace.textfont.size = 10  # Set font size for all traces        
 
 
     # Set y-axis range
@@ -224,12 +224,12 @@ def plot_histograms(product_name, platform_name):
             ticklabelposition="outside",
             title_standoff=10,
             ticks="outside",
-            tickfont=dict(size=14),
+            tickfont=dict(size=9),
         ),
         plot_bgcolor='rgba(0,0,0,0)',
         paper_bgcolor='rgba(0,0,0,0)',
         font_color='white',
-        bargap=0.4,
+        bargap=0.6,
         bargroupgap=0.3,
    yaxis=dict(
         showgrid=False,  # Enable horizontal grid lines
@@ -256,13 +256,13 @@ def plot_histograms(product_name, platform_name):
             "y": -0.5,
             "xanchor": "center",
             "x": 0.5,
-            "font": {"color": "white", "size": 15},
+            "font": {"color": "white", "size": 6},
         },
         legend_title_text="",
     )
 
     # Convert figure to HTML and return
-    fig_html = fig.to_html(include_plotlyjs='cdn')
+    fig_html = fig.to_html(include_plotlyjs='cdn',  config={'displayModeBar': False})
     return fig_html
 
 

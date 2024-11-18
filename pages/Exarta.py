@@ -9,8 +9,108 @@ st.set_page_config(layout='wide', initial_sidebar_state='collapsed')
 st.markdown(
     """
     <style>
+      [data-testid="stSidebar"] {
+        background-color: #272B34;
+    }
 
-   ._container_51w34_1,
+  .st-emotion-cache-cxju6m {
+    position: relative;
+    top: 0px;
+    background-color: #272B34;
+    z-index: 999991;
+    min-width: 244px;
+    max-width: 337.5px;
+    transform: none;
+    transition: transform 300ms, min-width 300ms, max-width 300ms;
+}
+  svg[viewBox="0 0 24 24"] > path[d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12l4.58-4.59z"] {
+        fill: white !important;
+    }
+
+    /* Select the right-pointing arrow SVG (sidebar closed) */
+    svg[viewBox="0 0 24 24"] > path[d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"] {
+        fill: transparent !important;
+    }
+
+
+
+    .st-emotion-cache-6tkfeg {
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: table-cell;
+}
+
+    st-emotion-cache-onk2zl eczjsme18 {
+    position: relative;
+    user-select: auto;
+    width: 176px;
+    height: auto;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+
+    .st-emotion-cache-onk2zl {
+    position: relative;
+    top: 0px;
+    background-color: #272B34;
+    z-index: 999991;
+    min-width: 244px;
+    max-width: 288px;
+    transform: none;
+    transition: transform 300ms, min-width 300ms, max-width 300ms;
+}
+
+    .st-emotion-cache-1f3w014 {
+    vertical-align: middle;
+    overflow: hidden;
+    color: inherit;
+    fill: currentcolor;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 1.5rem;
+    width: 30px;
+    height: 67px;
+    flex-shrink: 0;
+}
+
+
+.st-emotion-cache-ocqkz7 {
+    margin-left: 8px;
+    margin-right: 116px;
+    display: 10;
+    /* -webkit-box-flex: 1; */
+    /* flex-grow: 1; */
+    /* -webkit-box-align: stretch; */
+    /* align-items: stretch; */
+    gap: 15px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+    .st-emotion-cache-1vt4y43 {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    font-weight: 400;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    min-height: 2.5rem;
+    margin: 0px;
+    line-height: 1.6;
+    color: inherit;
+    width: auto;
+    user-select: none;
+    background-color: #272B34;
+    border: 1px solid rgba(49, 51, 63, 0.2);
+}
+
+    ._container_51w34_1,
     ._profileContainer_51w34_53 {
         display: none;
         visibility: hidden;
@@ -28,6 +128,29 @@ st.markdown(
         background-color: #191B21;
         color: white;
     }
+
+     @media (max-width: 768px) {
+
+         [data-testid="stIFrame"] {
+    margin-top: -80px !important;
+    border: 0 !important;
+    overflow: hidden;
+}
+.st-emotion-cache-19u4bdk {
+    position: fixed;
+    top: 3.25rem;
+    left: 2.5rem;
+    z-index: 2;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    align-items: start;
+    transition: left 300ms;
+}
+     
+
+    }
     </style>
     """,
     unsafe_allow_html=True
@@ -40,21 +163,50 @@ exarta_youtube, exarta_x, exarta_facebook, exarta_linkedin, exarta_instagram = e
 
 
 
-exarta_first_html_code = f"""
+Exarta_html_code = f"""
     <style>
-    .header {{
+     .header {{
         background-color: #20232A;
         padding: 20px;
         text-align: center;
         color: white;
     }}
     .main-container {{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+   
+    display: flex;
+    flex-direction: column;
     gap: 20px;
-
+    height: 100vh; /* Full height of the viewport */
+    padding: 0px;
+    box-sizing: border-box; /* Ensure padding does not increase height */
 }}
 
+.exartaLogo {{
+          padding-left: 80%;
+        width: 50px;
+        height: 50px;
+}}
+
+.menulogo {{
+          width: 30px;
+    height: 24px;
+}}
+
+ .header-link {{
+            display: none;
+        }}
+
+       .heading{{
+       text-align: left;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+       }} 
+
+ 
 .main-card {{
     background-color: #272B34;
     height: 260px;
@@ -63,7 +215,7 @@ exarta_first_html_code = f"""
     text-align: center;
     color: white;
     position: relative;
-}}
+}} 
 
 .image-container {{
     position: absolute;
@@ -146,13 +298,13 @@ exarta_first_html_code = f"""
         align-items: center;
     }}
     .metric-container {{
-            margin-top: 100px;
+            margin-top: 70px;
         }}
         .metric-row {{
             display: flex;
             justify-content: space-between;
 
-            padding: 10px 0;
+            padding: 6px 0;
         }}
         .metric-row p {{
             margin: 0;
@@ -179,23 +331,7 @@ exarta_first_html_code = f"""
             line-height: normal;
             text-align: right;
         }}
-                .progress-container {{
-    width: 100%; /* Full width relative to the parent container */
-    max-width: 1800px; /* Maximum width to ensure it doesn't exceed 1800px */
-    height: 10px;
-    background-color: #323743; /* Background color of the entire container */
-    border-radius: 0px; /* No rounding for the container edges */
-    overflow: hidden; /* Ensures that the progress bar stays within the container */
-    margin: 0 auto; /* Center the progress container */
-}}
- 
-.progress-bar {{
-    width: 0; /* Initial width of the progress bar */
-    height: 100%; /* Full height of the container */
-    background: #495161; /* Progress bar color */
-    border-radius: 5px;
-    animation: grow 60s linear forwards; /* Animation: grow over 10 seconds */
-}}
+           
  
 @keyframes grow {{
     from {{
@@ -214,7 +350,7 @@ exarta_first_html_code = f"""
 }}
  
 .image-containery img {{
-    width: 100px; /* Adjust as needed */
+    width: 120px; /* Adjust as needed */
     height: 45px;
 }}
 
@@ -237,25 +373,23 @@ exarta_first_html_code = f"""
         </head>
 
 
-    <div class="header">
+   
+  <div class="header">
         <div style="display: flex; justify-content: space-between; align-items: center;">
-             <img style="padding-left:100px;" src="https://i.ibb.co/0jT4xCS/Logo-2-1.png" alt="logo" style="width:100px;">
-            <div>
-                <a href="#overview" style="margin-right: 20px; padding-right:100px; color: #F0F0F0; font-family: 'Roboto', sans-serif; font-size: 25px; font-style: normal; font-weight: 300; line-height: normal; text-decoration: none;">Overview</a>
- 
-                <a href="#zeniva" style="margin-right: 20px; padding-right:100px; color: #F0F0F0; font-family: 'Roboto', sans-serif; font-size: 25px; font-style: normal; font-weight: 300; line-height: normal; text-decoration: none; text-decoration-color: none;">Zeniva</a>
- 
-                <a href="#odyessey" style="margin-right: 20px; padding-right:100px; color: #F0F0F0; font-family: 'Roboto', sans-serif; font-size: 25px; font-style: normal; font-weight: 300; line-height: normal; text-decoration: none;">Odyssey</a>
- 
-                <a href="#exarta" style="padding-right:100px; color: #F0F0F0; font-family: 'Roboto', sans-serif; font-size: 25px; font-style: normal; font-weight: 300; line-height: normal; text-decoration: underline;">Exarta</a>
-
+                      <img class="menulogo" src="https://i.ibb.co/G2zRtNb/Frame.png" alt="logo">
+                        <img class="exartaLogo" src="https://i.ibb.co/0jT4xCS/Logo-2-1.png" alt="logo">
+            <div> 
+              <a href="#overview" class="header-link">Overview</a>
+            <a href="#zeniva" class="header-link">Zeniva</a>
+            <a href="#odyssey" class="header-link">Odyssey</a>
+            <a href="#exarta" class="header-link">Exarta</a>
+    
             </div>
         </div>
     </div>
-     <div class="progress-container">
-    <div class="progress-bar"></div>
+
 </div>
-    <h2 style='text-align:left; color:white;font-family: Roboto; font-size: 30px; font-style: normal;font-weight: 600; line-height: normal;'>Social Media</h2>
+    <h2 class="heading">Social Media</h2>
     <div class="main-container">
     <div class="main-card">
         <div class="image-containery">
@@ -378,6 +512,6 @@ exarta_first_html_code = f"""
 
 </div>
 """
-components.html(exarta_first_html_code, height=1000)
-time.sleep(60)
-st.switch_page("./main.py")
+components.html(Exarta_html_code, height=1000, scrolling=True)
+# time.sleep(60)
+# st.switch_page("./main.py")
