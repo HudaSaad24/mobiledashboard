@@ -72,6 +72,7 @@ st.markdown(
 
 
 .st-emotion-cache-ocqkz7 {
+    margin-top: -38px;
     margin-left: 8px;
     margin-right: 116px;
     display: 10;
@@ -423,9 +424,9 @@ html_code = f"""
 }}
 
 .exartaLogo {{
-          padding-left: 80%;
-        width: 50px;
-        height: 50px;
+                  padding-left: 75%;
+        width: 44px;
+        height: 23px;
 }}
 
  .header-link {{
@@ -480,7 +481,7 @@ st.markdown(
     .button {
     margin-top: 11px;
     font-size: 16px;
-    padding: 5px 21px;
+    padding: 5px 31px;
     border-radius: 8px;
     border: none;
     cursor: pointer;
@@ -533,7 +534,7 @@ with col1:
         button_style = "active-button"
     else:
         button_style = "default-button"
-    if st.button("Odssey3D", key="navigate_to_second"):
+    if st.button("Odyssey3D", key="navigate_to_second"):
         st.switch_page("pages/Odyssey_Overview.py")
         
 # Button for "Social Media"
@@ -845,6 +846,6 @@ font-family: Roboto;
 """
  
 
-components.html(html_code, height=1000)
+components.html(html_code, height=610)
 # time.sleep(60)
 # st.switch_page("pages/Zeniva_Social_Media.py")

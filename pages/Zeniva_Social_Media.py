@@ -851,9 +851,9 @@ html_code_metrics = f"""
 }}
 
 .exartaLogo {{
-    padding-left: 5px;
-    width: 50px;
-    height: 50px;
+          padding-left: 75%;
+        width: 44px;
+        height: 23px;
 }}
 
  .header-link {{

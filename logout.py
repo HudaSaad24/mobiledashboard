@@ -420,9 +420,9 @@ html_code = f"""
 }}
 
 .exartaLogo {{
-        padding-left: 80%;
-        width: 50px;
-        height: 50px;
+               padding-left: 75%;
+        width: 44px;
+        height: 23px;
 }}
  .header-link {{
             display: none;

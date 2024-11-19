@@ -82,6 +82,7 @@ st.markdown(
 
 
 .st-emotion-cache-ocqkz7 {
+    margin-top: -38px;
     margin-left: 8px;
     margin-right: 70px;
     display: 10;
@@ -429,9 +430,9 @@ html_code = f"""
 }}
 
 .exartaLogo {{
-        padding-left: 80%;
-        width: 50px;
-        height: 50px;
+                padding-left: 75%;
+        width: 44px;
+        height: 23px;
 }}
 
 .menulogo {{
@@ -506,12 +507,12 @@ st.markdown(
     }
 
     /* Active button style for the current page */
-    .active-button {
+   .active-button {
     background-color: #F68C5B;
     color: white;
     border-radius: 8px;
     height: 36px;
-   width: 109px;
+    width: 116px;
     margin-top: 2px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -542,7 +543,7 @@ with col1:
         button_style = "active-button"
     else:
         button_style = "default-button"
-    st.markdown(f'<button class="button {button_style}">Odssey3D</button>', unsafe_allow_html=True)
+    st.markdown(f'<button class="button {button_style}">Odyssey3D</button>', unsafe_allow_html=True)
 
 # Button for "Social Media" (Navigates to Zeniva_Social_Media)
 with col2:
@@ -885,6 +886,6 @@ font-family: Roboto;
 """
  
 
-components.html(html_code_metrics, height=1000)
+components.html(html_code_metrics, height=620)
 # time.sleep(60)
 # st.switch_page("pages/Zeniva_Social_Media.py")

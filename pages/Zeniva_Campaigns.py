@@ -78,6 +78,7 @@ st.markdown(
 
 
 .st-emotion-cache-ocqkz7 {
+    margin-top: -38px;
     margin-left: 8px;
     margin-right: 116px;
     display: 10;
@@ -423,9 +424,9 @@ html_code = f"""
 }}
 
 .exartaLogo {{
-        padding-left: 80%;
-        width: 50px;
-        height: 50px;
+               padding-left: 75%;
+        width: 44px;
+        height: 23px;
 }}
 .menulogo {{
           width: 30px;
