@@ -787,7 +787,7 @@ font-family: Roboto;
     </div>
     <div class="card3">
         <p class="card-number">{int(lifetime_installs_zin)}</p>
-        <p class="card-text">Lifetime Installs</p>
+        <p class="card-text">Total Installs</p>
     </div>
     </div>
   <div class="secondrowcards">
@@ -801,7 +801,7 @@ font-family: Roboto;
     </div>
     <div class="card">
         <p class="card-number">{int(lifetime_uninstalls_zin)}</p>
-        <p class="card-text">Lifetime Uninstalls</p>
+        <p class="card-text">Total Uninstalls</p>
     </div>
 </div>
    
@@ -822,7 +822,7 @@ font-family: Roboto;
     </div>
     <div class="card3">
         <p class="card-number">{int(lifetime_installs_for_odyssey)}</p>
-        <p class="card-text">Lifetime Installs</p>
+        <p class="card-text">Total Installs</p>
     </div>
     </div>
      <div class="secondrowcards">
@@ -836,7 +836,7 @@ font-family: Roboto;
     </div>
     <div class="card">
         <p class="card-number">{int(lifetime_uninstalls_for_odyssey)}</p>
-        <p class="card-text">Lifetime Uninstalls</p>
+        <p class="card-text">Total Uninstalls</p>
     </div>
 </div>
 </div>
