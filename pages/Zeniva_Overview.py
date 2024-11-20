@@ -495,6 +495,7 @@ st.markdown(
         color: black;
     }
 
+
     /* Active button style for the current page */
     .active-button {
     background-color: #F68C5B;

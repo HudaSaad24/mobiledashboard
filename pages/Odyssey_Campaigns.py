@@ -79,6 +79,7 @@ st.markdown(
 
 
 .st-emotion-cache-ocqkz7 {
+    margin-top: -22px;
     margin-left: 8px;
     margin-right: 116px;
     display: 10;
