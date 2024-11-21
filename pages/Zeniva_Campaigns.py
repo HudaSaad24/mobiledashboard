@@ -9,10 +9,17 @@ st.set_page_config(layout='wide', initial_sidebar_state='collapsed')
 st.markdown(
     """
     <style>
-      [data-testid="stSidebar"] {
-        background-color: #272B34;
+
+         .st-emotion-cache-keje6w {
+    min-width: calc(97% - -0.5rem);
+}
+
+
+
+    [data-testid="stSidebar"] {
+        background-color:#272B34;
     }
-   .st-emotion-cache-cxju6m {
+    .st-emotion-cache-cxju6m {
     position: relative;
     top: 0px;
     background-color: #272B34;
@@ -78,27 +85,27 @@ st.markdown(
 
 
 .st-emotion-cache-ocqkz7 {
-    margin-top: -38px;
     margin-left: 8px;
-    margin-right: 116px;
+    margin-right: 130px;
+        margin-top: -40px;
     display: 10;
     /* -webkit-box-flex: 1; */
     /* flex-grow: 1; */
     /* -webkit-box-align: stretch; */
     /* align-items: stretch; */
-    gap: 15px;
+    gap: 5px;
     flex-direction: row;
     flex-wrap: nowrap;
 }
 
     .st-emotion-cache-1vt4y43 {
-    display: inline-flex;
+   isplay: inline-flex;
     -webkit-box-align: center;
     align-items: center;
     -webkit-box-pack: center;
     justify-content: center;
     font-weight: 400;
-    padding: 0.25rem 0.75rem;
+    padding: 8px 14px;
     border-radius: 0.5rem;
     min-height: 2.5rem;
     margin: 0px;
@@ -110,6 +117,14 @@ st.markdown(
     border: 1px solid rgba(49, 51, 63, 0.2);
 }
 
+st-emotion-cache-1vt4y43:hover {
+    border-color: white;
+    background-color: transparent;
+}
+.st-emotion-cache-1vt4y43:active {
+    border-color: white;
+    background-color: transparent;
+}
     ._container_51w34_1,
     ._profileContainer_51w34_53 {
         display: none;
@@ -155,7 +170,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
 
 zeniva_youtube_plot = plot_histograms("zeniva", "youtube")
 zeniva_meta_plot = plot_histograms("zeniva", "meta")
@@ -482,16 +496,14 @@ st.markdown(
     """
     <style>
     .button {
-    margin-top: 11px;
     font-size: 16px;
-    padding: 5px 21px;
+    padding: 8px 8px;
     border-radius: 8px;
     border: none;
     cursor: pointer;
     color: #272B34;
-    margin: 5px;
+    margin: 0px;
 }
-
     /* Default button style */
     .default-button {
         background-color: #F68C5B;
@@ -501,10 +513,10 @@ st.markdown(
     /* Active button style for the current page */
     .active-button {
     background-color: #F68C5B;
-    color: white;
+    color: black;
     border-radius: 8px;
-    height: 36px;
-    width: 150px;
+        height: 39px;
+    width: 127px;
     margin-top: 2px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }

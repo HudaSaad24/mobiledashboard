@@ -10,6 +10,11 @@ st.set_page_config(layout='wide', initial_sidebar_state='collapsed')
 st.markdown(
     """
     <style>
+
+           .st-emotion-cache-keje6w {
+        min-width: calc(88% - -1.5rem);
+    }
+
     [data-testid="stSidebar"] {
         background-color:#272B34;
     }
@@ -86,7 +91,7 @@ st.markdown(
     /* flex-grow: 1; */
     /* -webkit-box-align: stretch; */
     /* align-items: stretch; */
-    gap: 15px;
+    gap: 5px;
     flex-direction: row;
     flex-wrap: nowrap;
 }
@@ -110,6 +115,14 @@ st.markdown(
     border: 1px solid rgba(49, 51, 63, 0.2);
 }
 
+st-emotion-cache-1vt4y43:hover {
+    border-color: white;
+    background-color: transparent;
+}
+.st-emotion-cache-1vt4y43:active {
+    border-color: white;
+    background-color: transparent;
+}
     ._container_51w34_1,
     ._profileContainer_51w34_53 {
         display: none;
@@ -559,14 +572,13 @@ st.markdown(
     """
     <style>
     .button {
-    margin-top: 11px;
-    font-size: 16px;
-    padding: 5px 21px;
+        font-size: 16px;
+    padding: 7px 8px;
     border-radius: 8px;
     border: none;
     cursor: pointer;
     color: #272B34;
-    margin: 5px;
+    margin: 0px;
 }
 
     /* Default button style */
@@ -578,10 +590,10 @@ st.markdown(
     /* Active button style for the current page */
     .active-button {
     background-color: #F68C5B;
-    color: white;
+    color: black;
     border-radius: 8px;
-    height: 36px;
-    width: 150px;
+        height: 40px;
+        width: 125px;
     margin-top: 2px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -596,7 +608,7 @@ st.markdown(
 
 # Initialize session state if not already set
 if 'current_page' not in st.session_state:
-    st.session_state.current_page = "Zeniva_Campaigns"
+    st.session_state.current_page = "Zeniva_Social_Media"
 
 # Function to navigate to the other page
 def navigate_to(page):
@@ -612,7 +624,9 @@ with col1:
         button_style = "active-button"
     else:
         button_style = "default-button"
-    st.markdown(f'<button class="button {button_style}">Social Media</button>', unsafe_allow_html=True)
+    if st.button("Paid Campaigns", key="navigate_to_first"):
+        st.switch_page("pages/Zeniva_Campaigns.py")   
+   
 
 # Button for "Social Media" (Navigates to Zeniva_Social_Media)
 with col2:
@@ -620,11 +634,10 @@ with col2:
         button_style = "active-button"
     else:
         button_style = "default-button"
-    if st.button("Paid campaigns", key="navigate_to_first"):
-        st.switch_page("pages/Zeniva_Campaigns.py")
+    st.markdown(f'<button class="button {button_style}">Social Media</button>', unsafe_allow_html=True)
+
 
 st.markdown("---")
-
 
 html_code_metrics = f"""
     <style>

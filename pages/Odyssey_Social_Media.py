@@ -11,7 +11,7 @@ st.markdown(
       [data-testid="stSidebar"] {
         background-color: #272B34;
     }
-  .st-emotion-cache-cxju6m {
+   .st-emotion-cache-cxju6m {
     position: relative;
     top: 0px;
     background-color: #272B34;
@@ -77,9 +77,9 @@ st.markdown(
 
 
 .st-emotion-cache-ocqkz7 {
-    margin-top: -38px;
+    margin-top: -22px;
     margin-left: 8px;
-    margin-right: 130px;
+    margin-right: 116px;
     display: 10;
     /* -webkit-box-flex: 1; */
     /* flex-grow: 1; */
@@ -107,6 +107,15 @@ st.markdown(
     user-select: none;
     background-color: #272B34;
     border: 1px solid rgba(49, 51, 63, 0.2);
+}
+
+.st-emotion-cache-1vt4y43:hover {
+    border-color: white;
+    background-color: transparent;
+}
+.st-emotion-cache-1vt4y43:active {
+    border-color: white;
+    background-color: transparent;
 }
 
     ._container_51w34_1,
@@ -484,14 +493,13 @@ st.markdown(
     """
     <style>
     .button {
-    margin-top: 11px;
-    font-size: 16px;
-    padding: 5px 21px;
+        font-size: 16px;
+    padding: 7px 8px;
     border-radius: 8px;
     border: none;
     cursor: pointer;
     color: #272B34;
-    margin: 5px;
+    margin: 0px;
 }
 
     /* Default button style */
@@ -503,10 +511,10 @@ st.markdown(
     /* Active button style for the current page */
     .active-button {
     background-color: #F68C5B;
-    color: white;
+    color: black;
     border-radius: 8px;
-    height: 36px;
-    width: 150px;
+        height: 40px;
+         width: 118px;
     margin-top: 2px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -519,9 +527,10 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+
 # Initialize session state if not already set
 if 'current_page' not in st.session_state:
-    st.session_state.current_page = "ody_second"
+    st.session_state.current_page = "Odyssey_Social_Media"
 
 # Function to navigate to the other page
 def navigate_to(page):
@@ -533,11 +542,13 @@ col1, col2 = st.columns(2)
 
 # Button for "Paid Campaigns" (Active on this page)
 with col1:
-    if st.session_state.current_page == "ody_second":
+    if st.session_state.current_page == "Odyssey_Campaigns":
         button_style = "active-button"
     else:
         button_style = "default-button"
-    st.markdown(f'<button class="button {button_style}">Social Media</button>', unsafe_allow_html=True)
+    if st.button("Paid Campaigns", key="navigate_to_first"):
+        st.switch_page("pages/Odyssey_Campaigns.py")    
+   
 
 # Button for "Social Media" (Navigates to Zeniva_Social_Media)
 with col2:
@@ -545,9 +556,8 @@ with col2:
         button_style = "active-button"
     else:
         button_style = "default-button"
-    if st.button("Paid Campaigns", key="navigate_to_first"):
-        st.switch_page("pages/Odyssey_Campaigns.py")
-
+    st.markdown(f'<button class="button {button_style}">Social Media</button>', unsafe_allow_html=True)    
+   
 st.markdown("---")
 
 

@@ -104,6 +104,15 @@ st.markdown(
     border: 1px solid rgba(49, 51, 63, 0.2);
 }
 
+.st-emotion-cache-1vt4y43:hover {
+    border-color: white;
+    background-color: transparent;
+}
+.st-emotion-cache-1vt4y43:active {
+    border-color: white;
+    background-color: transparent;
+}
+
     ._container_51w34_1,
     ._profileContainer_51w34_53 {
         display: none;

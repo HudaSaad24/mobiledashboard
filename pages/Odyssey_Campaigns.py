@@ -111,6 +111,14 @@ st.markdown(
     border: 1px solid rgba(49, 51, 63, 0.2);
 }
 
+.st-emotion-cache-1vt4y43:hover {
+    border-color: white;
+    background-color: transparent;
+}
+.st-emotion-cache-1vt4y43:active {
+    border-color: white;
+    background-color: transparent;
+}
     ._container_51w34_1,
     ._profileContainer_51w34_53 {
         display: none;
@@ -485,16 +493,14 @@ st.markdown(
     """
     <style>
     .button {
-    margin-top: 11px;
     font-size: 16px;
-    padding: 5px 21px;
+    padding: 8px 8px;
     border-radius: 8px;
     border: none;
     cursor: pointer;
     color: #272B34;
-    margin: 5px;
+    margin: 0px;
 }
-
     /* Default button style */
     .default-button {
         background-color: #F68C5B;
@@ -504,10 +510,10 @@ st.markdown(
     /* Active button style for the current page */
     .active-button {
     background-color: #F68C5B;
-    color: white;
+    color: black;
     border-radius: 8px;
-    height: 36px;
-    width: 150px;
+        height: 39px;
+    width: 127px;
     margin-top: 2px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -519,10 +525,9 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
 # Initialize session state if not already set
 if 'current_page' not in st.session_state:
-    st.session_state.current_page = "ody_second"
+    st.session_state.current_page = "Odyssey_Campaigns"
 
 # Function to navigate to the other page
 def navigate_to(page):
@@ -534,7 +539,7 @@ col1, col2 = st.columns(2)
 
 # Button for "Paid Campaigns" (Active on this page)
 with col1:
-    if st.session_state.current_page == "ody_second":
+    if st.session_state.current_page == "Odyssey_Campaigns":
         button_style = "active-button"
     else:
         button_style = "default-button"

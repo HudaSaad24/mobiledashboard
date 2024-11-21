@@ -16,6 +16,9 @@ st.markdown(
       [data-testid="stSidebar"] {
         background-color: #272B34;
     }
+
+ 
+   
    .st-emotion-cache-cxju6m {
     position: relative;
     top: 0px;
@@ -114,6 +117,14 @@ st.markdown(
     border: 1px solid rgba(49, 51, 63, 0.2);
 }
 
+.st-emotion-cache-1vt4y43:hover {
+    border-color: white;
+    background-color: transparent;
+}
+.st-emotion-cache-1vt4y43:active {
+    border-color: white;
+    background-color: transparent;
+}
     ._container_51w34_1,
     ._profileContainer_51w34_53 {
         display: none;
@@ -509,7 +520,7 @@ st.markdown(
     /* Active button style for the current page */
    .active-button {
     background-color: #F68C5B;
-    color: white;
+    color: black;
     border-radius: 8px;
     height: 36px;
     width: 116px;
